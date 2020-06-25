@@ -5,6 +5,10 @@ import "./App.css";
 import { store } from "./store/store";
 import * as actions from "./store/auth";
 
+store.subscribe(() => {
+  console.log("state Change");
+});
+
 store.dispatch(actions.bugAdded("bug 1"));
 store.dispatch(actions.bugRemoved(1));
 store.dispatch(actions.bugAdded("bug 2"));
